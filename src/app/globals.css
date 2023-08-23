@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /*--foreground-rgb: 0, 0, 0;*/
+  /*--background-start-rgb: 214, 219, 220;*/
+  /*--background-end-rgb: 255, 255, 255;*/
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*--foreground-rgb: 255, 255, 255;*/
+    /*--background-start-rgb: 0, 0, 0;*/
+    /*--background-end-rgb: 0, 0, 0;*/
+  }
+}
+
+body {
+  /*color: rgb(var(--foreground-rgb));*/
+  color:#FFFFFF;
+  background-color: #fff;
+}
+input{
+  border: 0;/*清除自带的2px的边框*/
+  padding: 0;/*清除自带的padding间距*/
+}
+input:focus {
+  outline: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.page_loading_icon{
+  -webkit-animation:myRotate 2s linear infinite;
+  animation:myRotate 2s linear infinite;
+}
+@-webkit-keyframes myRotate{
+  0%{ -webkit-transform: rotate(0deg);}
+  50%{ -webkit-transform: rotate(180deg);}
+  100%{ -webkit-transform: rotate(360deg);}
+}
+@keyframes myRotate{
+  0%{ -webkit-transform: rotate(0deg);}
+  50%{ -webkit-transform: rotate(180deg);}
+  100%{ -webkit-transform: rotate(360deg);}
+}
+.page_loading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  height:100%;
+}
+
+
+/*ol, ul, dl {*/
+/*  margin-bottom: 0 !important;*/
+/*}*/
+.main {
+  width: 90%;
+  max-width: 1200px;
+  margin:0 auto;
+  position: relative;
+}
+
